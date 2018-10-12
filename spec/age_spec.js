@@ -3,7 +3,6 @@ import {AgeCalculator } from '../src/age.js';
 describe('AgeCalculator' , function(){
     let hello = new AgeCalculator(12,1,1993,80)
     // let today = new Date();
-    let year = 25;
 
     it('should return false if inputYear is greater currentYear ' , function(){
         let hey = new AgeCalculator(1,12,2025,80);
@@ -35,44 +34,24 @@ describe('AgeCalculator' , function(){
         expect(age).toEqual(25);
     });
 
-    // it('it should return the age of the user in Mercurian years',function(){
-    //     let planet = hello.planetYears(year,'mercury');
-    //     expect(planet).toEqual('102.5');
-    // });
-
-    // it('it should return the age of the user in Venus years',function(){
-    //     let planet = hello.planetYears(year,'venus');
-    //     expect(planet).toEqual('40.3');
-    // });
-
-    // it('it should return the age of the user in Mars years',function(){
-    //     let planet = hello.planetYears(year,'mars');
-    //     expect(planet).toEqual('13.3');
-    // });
-
-    // it('it should return the age of the user in Jupitor years',function(){
-    //     let planet = hello.planetYears(year,'jupitor');
-    //     expect(planet).toEqual('2.0');
-    // });
-
     it('it should return the age of the user in Mercurian years' , function(){
-        let mAge = hello.mercuryYears(year);
-        expect(mAge).toEqual('102.5');
+        let mAge = hello.mercuryYears();
+        expect(mAge).toEqual(102.5);
     });
 
     it('it should return the age of the user in Venus years' , function(){
-        let vAge = hello.venusYears(year);
-        expect(vAge).toEqual('40.3');
+        let vAge = hello.venusYears();
+        expect(vAge).toEqual(40.3);
     });
 
     it('it should return the age of the user in Mars years' , function(){
-        let marge = hello.marsYears(year);
-        expect(marge).toEqual('13.3');
+        let marge = hello.marsYears();
+        expect(marge).toEqual(13.3);
     });
 
     it('it should return the age of the user in Jupitor years' , function(){
-        let jAge = hello.jupitorYears(year);
-        expect(jAge).toEqual('2.0');
+        let jAge = hello.jupitorYears();
+        expect(jAge).toEqual(2.0);
     });
 
     it('should return user remaining years on Earth', function(){
@@ -82,22 +61,22 @@ describe('AgeCalculator' , function(){
 
     it('should return user LE years on Mercury', function(){
         let LE = hello.mercuryLifeExpectancy();
-        expect(LE).toEqual('225.5');
+        expect(LE).toEqual(225.5);
     });
 
     it('should return user LE years on Venus', function(){
         let LE = hello.venusLifeExpectancy();
-        expect(LE).toEqual('88.6');
+        expect(LE).toEqual(88.6);
     });
 
     it('should return user LE years on Mars', function(){
         let LE = hello.marsLifeExpectancy();
-        expect(LE).toEqual('29.2');
+        expect(LE).toEqual(29.2);
     });
 
     it('should return user LE years on Jupitor', function(){
         let LE = hello.jupitorLifeExpectancy();
-        expect(LE).toEqual('4.4');
+        expect(LE).toEqual(4.4);
     });
 
     it('should return user bonus years on Earth', function(){
