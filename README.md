@@ -13,7 +13,13 @@ Calculate Juputor years:
 
 Get Life expectancy from user 
     LE = 80;
-    LE on earth = 80 - years;
+    ELE = LE on earth = 80 - years;
+    LE on Mercury = ELE * 4.1;
+    LE on Venus = ELE * 1.61;
+    LE on Mars = ELE * 0.52;
+    LE on Jupitor = ELE * 0.08;
+
+    BonusYears = age - ELE ;
 
 
 | Test | input | output | TestResult |
