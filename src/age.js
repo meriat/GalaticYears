@@ -6,7 +6,7 @@ export class AgeCalculator {
         this.inputYear = inputYear;
         this.lifeExpectancy = lifeExpectancy;
     }
-
+//method to check if the input date is valid or not
     isValidDate(){
         if(this.inputYear > today.getFullYear()) {
             return false;
@@ -26,12 +26,10 @@ export class AgeCalculator {
         if(this.isValidDate()){
             let yearDiff = 0;
             yearDiff = today.getFullYear() - this.inputYear;
-            // let age = 0;
-    
+
             if(today.getMonth() <= this.inputMonth){
                 yearDiff--;
             }
-            // age = yearDiff;
             let age = yearDiff;
             return age;
         }
@@ -40,6 +38,7 @@ export class AgeCalculator {
         }
 
     }
+
     mercuryYears() {
         let mercuryAge = this.findAgeInYears() * 4.1;
         let fixedMercuryAge = parseFloat(mercuryAge.toFixed(1));
@@ -64,6 +63,7 @@ export class AgeCalculator {
         return fixedJupitorAge;
     }
 
+    //gives the difference between life expectancy and age
     remainingYears(){
         return this.lifeExpectancy - parseInt(this.findAgeInYears());
     }

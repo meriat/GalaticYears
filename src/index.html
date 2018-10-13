@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="bundle.js"></script>
+    <!-- <script type="text/javascript" src="bundle.js"></script> -->
     <title>GalaticYears</title>
   </head>
   <body>
@@ -17,11 +17,28 @@
           <input type="number" id="le">
         </div>
         <button type="submit" class="btn btn-info">Calculate</button>
-      </form>
+      </form><br>
       <div id="output">
-        <ul>
-          
-        </ul>
+          <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Earth Years</th>
+                  <th scope="col">Mercury Years</th>
+                  <th scope="col">Venus Years</th>
+                  <th scope="col">Mars Years</th>
+                  <th scope="col">Jupiter Years</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="earth"></td>
+                  <td id="mercury"></td>
+                  <td id="venus"></td>
+                  <td id="mars"></td>
+                  <td id="jupiter"></td>
+                </tr>
+              </tbody>
+            </table>
       </div>
       
     </div>
